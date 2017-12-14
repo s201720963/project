@@ -14,14 +14,10 @@ typedef struct{
     char food[20];
 }calender;
 
-calender food_list[20];
-
-// calender month[12];
-// calender day[31];
+//calender food_list[20];
 
 int window();
 void operate();
-void presskey();
 void BMI();
 void calorie();
 void user_info_list();
@@ -148,7 +144,6 @@ void BMI()
             printf("\n Underweight \n\n"); // 저체중
         count++;
      }
-     presskey();
 }
 void calorie()
 {
@@ -167,6 +162,7 @@ void calorie()
         printf("\n");
         printf("User_%d \n",count);
         printf("Enter your gender and age \n");
+        printf("Male(1) \tFemale(2) \n");
         scanf("%d %d",&gender, &age);
 
         if(gender == 1)
@@ -191,7 +187,6 @@ void calorie()
         printf("\n");
         count++;
     }
-    presskey();
 }
 void user_info_list()
 {
@@ -208,7 +203,6 @@ void user_info_list()
         printf("\n");
         cnt++;
     }
-    presskey();
 }
 /*void food_calculate()
 {
@@ -248,10 +242,3 @@ void user_info_list()
     
 
 }*/
-void presskey()
-{
-    char c;
-    fflush(stdin);
-    printf("\n\n");
-    scanf("%c", &c);
-}
